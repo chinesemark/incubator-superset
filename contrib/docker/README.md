@@ -22,12 +22,29 @@ under the License.
 Docker is an easy way to get started with Superset.
 
 ## Initializing Database
+1.替换debian源
+在DOCKFILE里增加     #已增加
+RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+RUN sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
+  
+2.增加SUPERSET依赖的模块包
+在requirements-extra.txt里增加 #已增加
+pybigquery==0.4.10
+pandas_gbq==0.10.0
+gsheetsdb==0.1.9
+thrift==0.11.0
+mysqlclient==1.4.2
+psycopg2-binary==2.7.5
+elasticsearch-dbapi==0.1.0
+sasl==0.2.1
+thrift-sasl==0.3.0
 
 To initialize the database with a user and example charts, dashboards and datasets run:
 
 ```bash
 docker-compose run -e SUPERSET_LOAD_EXAMPLES=yes --rm superset ./docker-init.sh
 ```
+更新debian源
 
 This may take a minute.
 
