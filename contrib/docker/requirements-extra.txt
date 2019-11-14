@@ -15,3 +15,12 @@
 # limitations under the License.
 #
 gevent==1.4.0
+pybigquery==0.4.10
+pandas_gbq==0.10.0
+gsheetsdb==0.1.9
+thrift==0.11.0
+mysqlclient==1.4.2
+psycopg2-binary==2.7.5
+elasticsearch-dbapi==0.1.0
+sasl==0.2.1
+thrift-sasl==0.3.0
