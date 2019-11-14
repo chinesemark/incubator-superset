@@ -44,7 +44,6 @@ To initialize the database with a user and example charts, dashboards and datase
 ```bash
 docker-compose run -e SUPERSET_LOAD_EXAMPLES=yes --rm superset ./docker-init.sh
 ```
-更新debian源
 
 This may take a minute.
 
